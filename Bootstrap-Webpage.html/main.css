@@ -1,0 +1,45 @@
+body::before{
+  content: '';
+  height: 70px;
+  width: 100%;
+  display: block;
+}
+
+.logo{
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+}
+
+#intro{
+  background-image: url(./img/hero-img.jpg);
+  background-size: cover;
+  height: calc(100vh - 70px);
+}
+
+.circle{
+  display: inline-block;
+  border-radius: 50%;
+  width: 150px;
+  margin: auto;
+  height: 150px;
+  background-color: rgb(224, 71, 71);
+  color: white;
+  
+}
+
+.circle i{
+  font-size: 70px;
+  font-weight:bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+
+/* #img1{
+  height: 300px;
+  width: 570px;
+  float: right;
+} */
