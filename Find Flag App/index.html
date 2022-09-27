@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Guide App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img src="./img/world.png" class="logo me-2"> Find Your Country!
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Countries</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Neighbours</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-light text-dark p-5 text-center text-sm-start">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="for-input">
+          <input id="country-input" type="text" placeholder="Enter a country name" class="form-control">
+        </div>
+        <div>
+          <button id="search" class="btn btn-secondary ms-3">Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Country -->
+  <section class="bg-light text-dark text-center text-sm-start">
+    <div class="container">
+      <div id="picked-country" class="d-flex align-items-center justify-content-evenly">
+
+      </div>
+  </section>
+
+  <!-- Neighbours -->
+  <section class="p-5">
+    <div class="container">
+      <div class="neighbours row align-items-center justify-content-between">
+        <div class="card col col-6 col-lg-3 p-2">
+          <img src="${data[0].flags.svg}" class="card-img-top" alt=""  >
+          <div class="card-body">
+            <p>Name: <span class="name card-text">${data[0].name.common}</span></p>
+            <p>Capital: <span class="capital card-text">${data[0].capital[Object.keys(data[0].capital)]}</span></p>
+            <p>Population: <span class="population card-text">${data[0].population}</span></p>
+            <p>Language: <span class="language card-text">${data[0].languages[Object.keys(data[0].languages)]}</span></p>
+            <p>Currency: <span class="currency card-text">>${data[0].currencies[Object.keys(data[0].currencies)].name}</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
