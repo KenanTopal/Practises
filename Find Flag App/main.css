@@ -1,0 +1,10 @@
+.logo{
+  height: 40px;
+}
+
+body::before{
+  content: '';
+  height: 70px;
+  width: 100%;
+  display: block;
+}
